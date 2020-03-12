@@ -1,10 +1,12 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[libDraggable]'
+  selector: '[ez-draggable]'
 })
 export class DraggableDirective {
 
-  constructor() { }
+  constructor(el: ElementRef) {
+    el.nativeElement.style.backgroundColor = 'blue';
+  }
 
 }
